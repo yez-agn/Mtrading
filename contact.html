@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mtrading — Contact</title>
+<style>
+  body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background-image:url(background.png);
+    color:#111827;
+    line-height:1.5;
+  }
+  a{text-decoration:none;color:inherit;}
+  .container{width:90%;max-width:800px;margin:0 auto;}
+
+  /* HEADER */
+  header{
+    background:#2600ff;
+    padding:16px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.5rem;
+    color:#fff;
+  }
+  nav a{
+    margin-left:20px;
+    font-weight:600;
+    color:#fff;
+  }
+  nav a:hover{
+    color:#FFD700;
+  }
+
+  /* HERO */
+  .hero{
+    text-align:center;
+    padding:60px 0;
+  }
+  .hero h1{
+    font-size:2.5rem;
+    color:#ffffff;
+    margin-bottom:16px;
+  }
+  .hero p{
+    font-size:1.2rem;
+    color:#ffffff;
+    margin-bottom:24px;
+  }
+
+  /* FORMULAIRE */
+  form{
+    background:#ffbb00e1;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  }
+  form label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+    color:#ffffff;
+  }
+  form input, form textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:1rem;
+  }
+  form button{
+    padding:10px 16px;
+    background:#3E2723;
+    color:#fff;
+    font-weight:600;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+  }
+  form button:hover{
+    opacity:0.9;
+  }
+
+  /* FOOTER */
+  footer{
+    background:#1900ff;
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+    margin-top:40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">Mtrading</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="catalog.html">Catalogue</a>
+      <a href="contact.html">Contact</a>
+      <a href="coaching.html">Coaching</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Contactez-nous</h1>
+    <p>Nous sommes à votre écoute pour toutes questions ou demandes.</p>
+  </div>
+
+  <div class="container">
+    <form action="mailto:ton-email@example.com" method="post" enctype="text/plain">
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Votre message" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Mtrading. Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

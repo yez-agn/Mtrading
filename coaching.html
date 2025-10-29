@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mtrading — Coaching gratuit</title>
+<style>
+  body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background-image:url(background.png);
+    color:#111827;
+    line-height:1.5;
+  }
+  a{text-decoration:none;color:inherit;}
+  .container{width:90%;max-width:1200px;margin:0 auto;}
+
+  /* HEADER */
+  header{
+    background:#0016db;
+    padding:16px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.5rem;
+    color:#fff;
+  }
+  nav a{
+    margin-left:20px;
+    font-weight:600;
+    color:#fff;
+  }
+  nav a:hover{
+    color:#FFD700;
+  }
+
+  /* PAGE TITLE */
+  .page-title{
+    text-align:center;
+    padding:40px 0;
+  }
+  .page-title h1{
+    font-size:2.5rem;
+    color:#ffffff;
+    margin-bottom:12px;
+  }
+  .page-title p{
+    font-size:1.1rem;
+    color:#ffffff;
+  }
+
+  /* CARDS */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px 0;
+  }
+  .card{
+    background:#ffc400d7;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+    text-align:center;
+    padding:30px 20px;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  }
+  .card h3{
+    font-size:1.3rem;
+    color:#ffffff;
+    margin-bottom:12px;
+  }
+  .card p{
+    color:#ffffff;
+    font-size:1rem;
+    margin-bottom:20px;
+  }
+  .btn-primary{
+    background:#3E2723;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:10px 16px;
+    font-weight:600;
+    cursor:pointer;
+  }
+  .btn-primary:hover{
+    opacity:0.9;
+  }
+
+  /* FOOTER */
+  footer{
+    background:#001aff;
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+    margin-top:40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">Mtrading</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="catalog.html">Catalogue</a>
+      <a href="contact.html">Contact</a>
+      <a href="coaching.html">Coaching</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-title">
+    <h1>Coaching gratuit</h1>
+    <p>Choisissez votre niveau pour accéder au coaching sur notre serveur Discord.</p>
+  </div>
+
+  <div class="container cards">
+
+    <!-- Débutant absolu -->
+    <div class="card">
+      <h3>Débutant absolu</h3>
+      <p>Introduction au trading, concepts de base et premières étapes.</p>
+      <a href="se faire guider.html" class="btn-primary" target="_blank">Se faire guider</a>
+    </div>
+
+    <!-- Débutant confirmé -->
+    <div class="card">
+      <h3>Débutant confirmé</h3>
+      <p>Approfondissement des stratégies simples et analyse du marché.</p>
+      <a href="se faire guider.html" class="btn-primary" target="_blank">Se faire guider</a>
+    </div>
+
+    <!-- Expérimenté -->
+    <div class="card">
+      <h3>Expérimenté</h3>
+      <p>Stratégies intermédiaires et gestion avancée du risque.</p>
+      <a href="se faire guider.html" class="btn-primary" target="_blank">Se faire guider</a>
+    </div>
+
+    <!-- Professionnel -->
+    <div class="card">
+      <h3>Professionnel</h3>
+      <p>Techniques avancées, psychologie du trading et performance.</p>
+      <a href="se faire guider.html" class="btn-primary" target="_blank">Se faire guider</a>
+    </div>
+
+    <!-- Avancé -->
+    <div class="card">
+      <h3>Avancé</h3>
+      <p>Optimisation des stratégies et coaching expert.</p>
+      <a href="se faire guider.html" class="btn-primary" target="_blank">Se faire guider</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Mtrading. Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

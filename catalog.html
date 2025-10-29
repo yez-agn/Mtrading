@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mtrading — Catalogue d'eBooks</title>
+<style>
+  body {
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background-image:url(background.png);
+    color:#111827;
+    line-height:1.5;
+  }
+  a{text-decoration:none;color:inherit;}
+  .container{width:90%;max-width:1200px;margin:0 auto;}
+
+  /* HEADER */
+  header{
+    background:#1100ff;
+    padding:16px 0;
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .logo{
+    font-weight:700;
+    font-size:1.5rem;
+    color:#fff;
+  }
+  nav a{
+    margin-left:20px;
+    font-weight:600;
+    color:#fff;
+  }
+  nav a:hover{
+    color:#FFD700;
+  }
+
+  /* TITRE */
+  .page-title{
+    text-align:center;
+    padding:40px 0;
+  }
+  .page-title h1{
+    font-size:2.5rem;
+    color:#ffffff;
+    margin-bottom:12px;
+  }
+  .page-title p{
+    font-size:1.1rem;
+    color:#ffffff;
+  }
+
+  /* CARDS */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px 0;
+  }
+  .card{
+    background:#ffbc02e5;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  }
+  .card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+  }
+  .card-body{
+    padding:16px;
+  }
+  .card-body h3{
+    font-size:1.2rem;
+    margin-bottom:10px;
+    color:#ffffff;
+  }
+  .card-body p{
+    color:#ffffff;
+    font-size:0.95rem;
+    margin-bottom:12px;
+  }
+  .card-body .btn{
+    font-size:0.9rem;
+    margin-right:6px;
+    margin-bottom:6px;
+  }
+  .btn-primary{
+    background:#361b00;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:8px 14px;
+    font-weight:600;
+  }
+  .btn-outline{
+    border:2px solid #ff9900e7;
+    color:#ff7300;
+    border-radius:8px;
+    padding:8px 14px;
+    font-weight:600;
+  }
+  .btn-outline:hover,.btn-primary:hover{
+    opacity:0.9;
+  }
+
+  /* FOOTER */
+  footer{
+    background:#2600ff;
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+    margin-top:40px;
+  }
+
+  @media(max-width:768px){
+    nav{margin-top:12px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">Mtrading</div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="catalog.html">Catalogue</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="contact.html">Contact</a>
+      
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-title">
+    <h1>Catalogue d’eBooks</h1>
+    <p>Explorez tous nos ebooks gratuits, payants et avec coaching intégré</p>
+  </div>
+
+  <div class="container cards">
+
+    <!-- Ebook gratuit -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300.png?text=Trading+Débutant" alt="Trading Débutant">
+      <div class="card-body">
+        <h3>Trading débutant absolu</h3>
+        <p>Les bases du trading pour débutants.</p>
+        <a href="Trading_Debutant-absolu.pdf" class="btn btn-primary" download>Télécharger</a>
+      </div>
+    </div>
+
+    <!-- Ebook payant -->
+   <div class="card">
+      <img src="https://via.placeholder.com/400x300.png?text=Price+Action" alt="Price Action">
+      <div class="card-body">
+        <h3>Trading débutant confirmé</h3>
+        <p>Les bases techniques et fondamentales </p>
+       <a href="Trading débutant confirmé.pdf" class="btn btn-primary" download>Télécharger</a>
+      </div>
+    </div>
+
+    <!-- Ebook payant avec coaching -->
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300.png?text=Coaching+Trading" alt="Coaching Trading">
+      <div class="card-body">
+        <h3>L'analyse technique ultime</h3>
+        <p>Trading chartisme + ICT SMC </p>
+        <a href="https://chariow.com/checkout?product_id=103" class="btn btn-primary" target="_blank">Acheter</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Mtrading. Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
